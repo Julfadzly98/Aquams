@@ -12,4 +12,8 @@ if sensor_type == "MQ2":
     print("MQ2")
     from MQ2 import start
     start(sensor_ip, mqtt_server, topic_pub, topic_sub, sensor_type)
-# Other sensor type branches remain the same
+elif sensor_type == "DHT":
+    print("DHT")
+    from DHT import start
+    start(sensor_ip, mqtt_server, topic_pub, topic_sub, sensor_type)
+
